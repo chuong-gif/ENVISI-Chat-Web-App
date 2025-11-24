@@ -1,4 +1,4 @@
-import mongoone from 'mongoose';
+import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -20,18 +20,18 @@ const userSchema = new mongoose.Schema({
         lowercase: true     // chuyển về chữ thường
     },
     displayName: {
-        type: string,
+        type: String,
         required: true,
         trim: true,
     },
     avatarUrl: {
-        type: string,   // lưu đường dẫn ảnh
+        type: String,   // lưu đường dẫn ảnh
     },
     avatarId: {
-        type: string,   // lưu id ảnh trên cloudinary để xóa hình
+        type: String,   // lưu id ảnh trên cloudinary để xóa hình
     },
     bio: {
-        type: string,
+        type: String,
         maxlength: 600,  // giới hạn 600 ký tự
     },
     phone: {
